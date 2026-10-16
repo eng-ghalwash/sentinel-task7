@@ -14,22 +14,50 @@ task7/
   docker-compose.yml
 ```
 
-## Quick start (local)
+## Clone
+
+```bash
+git clone https://github.com/eng-ghalwash/sentinel-task7.git
+cd sentinel-task7
+```
+
+## Option A — Docker (أسهل)
+
+Requires: [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+```bash
+docker compose up --build
+```
+
+- App: http://localhost:5173  
+- API: http://localhost:8000  
+- Docs: http://localhost:8000/docs  
+
+## Option B — Local (بدون Docker)
+
+Requires: **Python 3.11+**, **Node.js 20+**
 
 ### 1) API
 
-```powershell
-cd "C:\Users\Asus\OneDrive\Desktop\Grad project\task7\api"
+```bash
+cd api
+python -m venv .venv
+
+# Windows
 .\.venv\Scripts\Activate.ps1
+# macOS / Linux
+# source .venv/bin/activate
+
+pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
 API docs: http://127.0.0.1:8000/docs
 
-### 2) Frontend
+### 2) Frontend (terminal تاني)
 
-```powershell
-cd "C:\Users\Asus\OneDrive\Desktop\Grad project\task7\frontend"
+```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -44,16 +72,6 @@ App: http://127.0.0.1:5173
 | analyst  | sentinel123  | Analyst |
 | auditor  | sentinel123  | Auditor |
 | client   | sentinel123  | Client  |
-
-## Docker
-
-```powershell
-cd "C:\Users\Asus\OneDrive\Desktop\Grad project\task7"
-docker compose up --build
-```
-
-- Frontend: http://localhost:5173
-- API: http://localhost:8000
 
 ## Pages delivered
 
