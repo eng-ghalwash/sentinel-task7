@@ -1,0 +1,33 @@
+# Dependencies & build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Secrets & env
+.env
+.env.*
+!.env.example
+
+# Logs & OS
+logs/
+*.log
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
